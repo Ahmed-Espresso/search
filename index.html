@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التصرفات المستترة في المعاملات والأحكام المتعلقة بها فقهاً وقانوناً</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --table-header: #2980b9;
+            --table-row-even: #f8f9fa;
+            --table-row-odd: #ffffff;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* الشريط الجانبي */
+        .sidebar {
+            width: 280px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-header h2 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .sidebar-header p {
+            color: #bdc3c7;
+            font-size: 13px;
+        }
+        
+        .nav-links {
+            list-style: none;
+        }
+        
+        .nav-links li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-links a {
+            display: block;
+            padding: 12px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding-right: 25px;
+        }
+        
+        .nav-links a.active {
+            background-color: var(--secondary-color);
+            border-right: 4px solid var(--accent-color);
+        }
+        
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px 40px;
+            overflow-x: hidden;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section:last-of-type {
+            border-bottom: none;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin: 25px 0 15px;
+            padding-right: 10px;
+            border-right: 4px solid var(--secondary-color);
+        }
+        
+        h3 {
+            color: var(--dark-color);
+            font-size: 18px;
+            margin: 20px 0 10px;
+            padding-right: 8px;
+            border-right: 3px solid #ddd;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 16px;
+            margin: 15px 0 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* الجداول */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 600px;
+        }
+        
+        table th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: bold;
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        table td {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            text-align: right;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+        
+        table tr:nth-child(odd) {
+            background-color: var(--table-row-odd);
+        }
+        
+        table tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .table-caption {
+            caption-side: top;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            color: var(--primary-color);
+            font-size: 16px;
+            background-color: #f0f7ff;
+            border-top: 2px solid var(--secondary-color);
+            border-right: 2px solid var(--secondary-color);
+            border-left: 2px solid var(--secondary-color);
+        }
+        
+        /* الاقتباسات والملاحظات */
+        .quote {
+            background-color: #f9f9f9;
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note {
+            background-color: #fff8e1;
+            border-right: 4px solid #ffc107;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+            font-size: 13px;
+        }
+        
+        /* رأس الصفحة */
+        .page-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        .page-header h1 {
+            border-bottom: none;
+            margin-bottom: 5px;
+        }
+        
+        .meta-info {
+            color: #666;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        
+        /* روابط التنقل */
+        .nav-top {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .nav-top a {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-top a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        /* الفهارس */
+        .index-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .index-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .index-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* التذييل */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* التجاوب مع الأجهزة المختلفة */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            table {
+                font-size: 13px;
+            }
+            
+            table th, table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>التصرفات المستترة في المعاملات</h2>
+                <p>دراسة مقارنة بين الفقه الإسلامي والقانون المصري</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#title-page" class="active">الصفحة الأولى</a></li>
+                <li><a href="#abstract">الملخص</a></li>
+                <li><a href="#toc">فهرس المحتويات</a></li>
+                <li><a href="#intro">المقدمة العامة</a></li>
+                <li><a href="#chapter0">الفصل التمهيدي</a></li>
+                <li><a href="#chapter1">الفصل الأول: البيع</a></li>
+                <li><a href="#chapter2">الفصل الثاني: الربا</a></li>
+                <li><a href="#chapter3">الفصل الثالث: الشركة</a></li>
+                <li><a href="#chapter4">الفصل الرابع: الإيجار</a></li>
+                <li><a href="#chapter5">الفصل الخامس: الوكالة</a></li>
+                <li><a href="#chapter6">الفصل السادس: الهبة</a></li>
+                <li><a href="#chapter7">الفصل السابع: الوصية</a></li>
+                <li><a href="#conclusion">الخاتمة والتوصيات</a></li>
+                <li><a href="#references">المراجع</a></li>
+            </ul>
+        </aside>
+        
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+            <!-- الصفحة الأولى -->
+            <section id="title-page" class="section">
+                <div class="page-header">
+                    <h1>البحث الكامل: التصرفات المستترة في المعاملات والأحكام المتعلقة بها فقهاً وقانوناً</h1>
+                    <h3>دراسة مقارنة بين الفقه الإسلامي على المذاهب الأربعة والقانون المصري</h3>
+                    <div class="meta-info">
+                        <p>إعداد الباحث: محمد مصطفى</p>
+                        <p>بسم الله الرحمن الرحيم</p>
+                        <p>العام الجامعي: 1445 هـ / 2024م</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="note">
+                    <p>جامعة: ......</p>
+                    <p>كلية: ......</p>
+                    <p>قسم: ......</p>
+                    <p>بحث مقدم في: التصرفات المستترة في المعاملات والأحكام المتعلقة بها فقهاً وقانوناً</p>
+                    <p>بإشراف: ١.٨. ......</p>
+                </div>
+            </section>
+            
+            <!-- الملخص -->
+            <section id="abstract" class="section">
+                <h2>الملخص</h2>
+                <p>يهدف هذا البحث إلى دراسة التصرفات المستترة في المعاملات المالية، وهي التصرفات التي يخفي فيها المتعاقدان القصد الحقيقي وراء صورة عقدية ظاهرها الصحة وباطنها التحايل. وقد تناول البحث هذه الظاهرة من منظورين: المنظور الفقهي الإسلامي وفق المذاهب الأربعة (الحنفي، المالكي، الشافعي، الحنبلي)، والمنظور القانوني وفق التشريع المصري.</p>
+                
+                <p>تضمن البحث دراسة سبعة عقود رئيسية هي: البيع، الربا، الشركة، الإيجار، الوكالة، الهبة، الوصية. وتم في كل عقد بيان صور التصرفات المستترة، وحكمها في المذاهب الأربعة مع ذكر محل الاتفاق والخلاف، ومناقشة الآراء والتوجيح، ثم بيان موقف القانون المصري منها، وأخيراً إجراء مقارنة بين الأحكام الفقهية والقانونية.</p>
+                
+                <p>اعتمد البحث على المنهج الاستقرائي في جمع الصور، والمنهج التحليلي في دراسة الأدلة، والمنهج المقارن في موازنة الآراء، والمنهج الاستنتاجي في استخلاص النتائج.</p>
+                
+                <p>توصل البحث إلى عدة نتائج أهمها: اتفاق المذاهب الأربعة على تحريم التصرفات المستترة إذا قصد بها التحايل على محرم قطعي، مع وجود بعض الاختلافات في التفاصيل والتطبيقات. كما توصل إلى وجود تقارب كبير بين الأحكام الفقهية الراجحة وأحكام القانون المصري في معظم المسائل، مع بعض الاختلافات الجزئية.</p>
+                
+                <p>قدم البحث مجموعة من التوصيات أهمها: ضرورة توحيد الجهود بين المؤسسات الشرعية والقانونية لمكافحة هذه الظاهرة، وتوعية الجمهور بمخاطرها، وتدريب القضاة على كشف النوايا الحقيقية في العقود.</p>
+                
+                <p><strong>الكلمات المفتاحية:</strong> التصرفات المستترة، التحايل، الفقه المقارن، القانون المصري، المعاملات المالية.</p>
+            </section>
+            
+            <!-- الفهرس -->
+            <section id="toc" class="section">
+                <h2>فهرس المحتويات</h2>
+                <div class="index-item"><a href="#intro">المقدمة العامة</a></div>
+                <div class="index-item"><a href="#intro1">مشكلة البحث وأهميته</a></div>
+                <div class="index-item"><a href="#intro2">أهداف البحث</a></div>
+                <div class="index-item"><a href="#intro3">منهجية البحث</a></div>
+                <div class="index-item"><a href="#intro4">الدراسات السابقة</a></div>
+                <div class="index-item"><a href="#intro5">صعوبات البحث</a></div>
+                <div class="index-item"><a href="#intro6">خطة البحث</a></div>
+                <div class="index-item"><a href="#chapter0">الفصل التمهيدي: الإطار العام للتصرفات المستترة</a></div>
+                <div class="index-item"><a href="#chapter1">الفصل الأول: التصرفات المستترة في عقد البيع</a></div>
+                <div class="index-item"><a href="#chapter2">الفصل الثاني: التصرفات المستترة في عقد الربا</a></div>
+                <div class="index-item"><a href="#chapter3">الفصل الثالث: التصرفات المستترة في عقد الشركة</a></div>
+                <div class="index-item"><a href="#chapter4">الفصل الرابع: التصرفات المستترة في عقد الإيجار</a></div>
+                <div class="index-item"><a href="#chapter5">الفصل الخامس: التصرفات المستترة في عقد الوكالة</a></div>
+                <div class="index-item"><a href="#chapter6">الفصل السادس: التصرفات المستترة في عقد الهبة</a></div>
+                <div class="index-item"><a href="#chapter7">الفصل السابع: التصرفات المستترة في الوصية</a></div>
+                <div class="index-item"><a href="#conclusion">الخاتمة والتوصيات</a></div>
+                <div class="index-item"><a href="#references">المراجع والفهارس</a></div>
+            </section>
+            
+            <!-- المقدمة -->
+            <section id="intro" class="section">
+                <h2>المقدمة العامة</h2>
+                
+                <h3 id="intro1">أولاً: مشكلة البحث وأهميته</h3>
+                <p>الحمد لله رب العالمين، والصلاة والسلام على سيدنا محمد خاتم النبيين وإمام المتقين، وعلى آله وصحبه أجمعين.</p>
+                
+                <p>أما بعد، فإن المعاملات المالية تشكل جانباً رئيسياً من حياة الإنسان، وقد نظمتها الشريعة الإسلامية تنظيماً دقيقاً يحقق العدالة ويحفظ الحقوق. ومن القضايا المعاصرة التي تشغل بال الباحثين والمشرعين قضية التصرفات المستترة في المعاملات، وهي التصرفات التي يلجأ فيها المتعاقدان إلى إخفاء القصد الحقيقي وراء صيغ عقدية ظاهرها الصحة وباطنها التحايل.</p>
+                
+                <p>تتمثل مشكلة البحث في انتشار هذه الظاهرة في المجتمعات المعاصرة، وتنوع صورها وتعقدها، واختلاف الأحكام الفقهية والقانونية فيها، مما يخلق إشكاليات عملية في التطبيق، ويحتاج إلى دراسة عميقة تبين الأحكام التفصيلية وترجح بين الآراء المختلفة.</p>
+                
+                <h4>أهمية البحث:</h4>
+                <ol>
+                    <li><strong>الأهمية الشرعية:</strong> بيان موقف الشريعة الإسلامية من التصرفات المستترة، وتوضيح الأحكام التفصيلية وفق المذاهب الفقهية الأربعة، وتحقيق مقاصد الشريعة في حفظ الأموال ومنع الغش.</li>
+                    <li><strong>الأهمية القانونية:</strong> تحليل النصوص القانونية المصرية ذات الصلة، ودراسة أحكام المحاكم المصرية في هذه المسائل، والمساهمة في تطوير التشريع المصري في هذا المجال.</li>
+                    <li><strong>الأهمية الاجتماعية:</strong> حماية المجتمع من آثار التصرفات المستترة الضارة، وتعزيز الثقة بين المتعاملين في السوق، وتحقيق العدالة في المعاملات المالية.</li>
+                    <li><strong>الأهمية الاقتصادية:</strong> الحفاظ على استقرار الأسواق المالية، ومنع الممارسات الاحتكارية غير المشروعة، وتشجيع الاستثمار في بيئة شفافة.</li>
+                    <li><strong>الأهمية العلمية:</strong> سد نقص في الدراسات المقارنة بين الفقه الإسلامي والقانون المصري، وتقديم دراسة شاملة تغطي سبعة عقود رئيسية، واعتماد منهجية البحث الفقهي المقارن في العرض والتحليل.</li>
+                </ol>
+                
+                <p>إن دراسة التصرفات المستترة ليست ترفاً علمياً، بل ضرورة عملية في ظل تطور المعاملات المالية وتعقدها، وتعدد وسائل التحايل والغش، مما يحتاج إلى وقفة جادة لمعالجة هذه الظاهرة من جذورها.</p>
+                
+                <h3 id="intro2">ثانياً: أهداف البحث</h3>
+                <p>يسعى هذا البحث إلى تحقيق الأهداف التالية:</p>
+                
+                <h4>1. الأهداف النظرية:</h4>
+                <ul>
+                    <li>تحديد مفهوم التصرفات المستترة لغة واصطلاحاً.</li>
+                    <li>بيان الضوابط العامة للتصرفات المستترة في الفقه الإسلامي.</li>
+                    <li>دراسة الأحكام التفصيلية في كل عقد من العقود المدروسة.</li>
+                    <li>تحليل النصوص القانونية المصرية وأحكام القضاء.</li>
+                    <li>إجراء مقارنة منهجية بين الأحكام الفقهية والقانونية.</li>
+                </ul>
+                
+                <h4>2. الأهداف التطبيقية:</h4>
+                <ul>
+                    <li>تقديم تصنيف دقيق لصور التصرفات المستترة.</li>
+                    <li>بيان الحكم الشرعي والقانوني لكل صورة.</li>
+                    <li>ترجيح الرأي الراجح في المسائل الخلافية.</li>
+                    <li>اقتراح آليات عملية للحد من انتشار هذه الظاهرة.</li>
+                </ul>
+            </section>
+            
+            <!-- الفصل التمهيدي -->
+            <section id="chapter0" class="section">
+                <h2>الفصل التمهيدي: الإطار العام للتصرفات المستترة</h2>
+                
+                <h3>المبحث الأول: مفهوم التصرفات المستترة لغة واصطلاحاً</h3>
+                <h4>أولاً: المعنى اللغوي</h4>
+                <p><strong>التصرف:</strong> مصدر تصرف، من الفعل صَرَفَ يُصْرِفُ، وهو في اللغة يدل على التحويل والرد، يقال: صَرَفَ الشيء عن وجهه أي حَوَّله، وتصَرَّفَ في الشيء: تعاطاه وتقلّب فيه، والتصرف: هو الفعل الذي يصدر من الشخص في ماله أو حقِّه.</p>
+                
+                <p><strong>المستترة:</strong> من الفعل استتر، وهو افتعال من الستر، والستر: التغطية والإخفاء، يقال: سَتَرَ الشيءَ سَتْراً غطاه، واستتر الرجل: أخفى نفسه وتغطّى.</p>
+                
+                <h4>ثانياً: المعنى الاصطلاحي</h4>
+                <p><strong>1. في الفقه الإسلامي:</strong> التصرف المستتر هو: "التصرف الذي يُخفي فيه المتعاقدان الحقيقة الشرعية للعقد، ويظهران صورة أخرى؛ يقصد التحايل على حكم شرعي أو الغش أو الخداع أو التمويه على الحقائق".</p>
+                
+                <p>ويعرف أيضاً بـ"الحيلة الفقهية": وهي "الطريقة الملتوية للتوصل إلى غرض محظور شرعاً تحت ستار غرض مشروع".</p>
+                
+                <p><strong>2. في القانون المصري:</strong> التصرف المستتر هو: "التصرف القانوني الذي يخفى فيه المتعاقدان قصدهما الحقيقي، ويرمان عقداً ظاهرياً يختلف عن العقد الحقيقي الذي يقصدانه، وذلك للتحايل على نص قانوني أو الغش أو الإضرار بالغير".</p>
+                
+                <h3>المبحث الثاني: الأسباب الدافعة للتصرفات المستترة</h3>
+                
+                <h4>أولاً: الأسباب الشرعية المحرمة</h4>
+                <ol>
+                    <li>التحايل على الأحكام الشرعية: كالتحايل على تحريم الربا، وعلى شروط البيع، وعلى أحكام الإجارة.</li>
+                    <li>الغش والخداع: كإخفاء عيوب السلعة، وتزيين الباطل، وإيهام الطرف الآخر بشروط غير حقيقية.</li>
+                    <li>التهرب من الالتزامات الشرعية: كالتهرب من الزكاة، ومن الديون، ومن الواجبات المالية.</li>
+                    <li>الإضرار بالغير: كإضرار الدائنين، وإضرار الشركاء، وإضرار الورثة.</li>
+                </ol>
+                
+                <h4>ثانياً: الأسباب الدنيوية</h4>
+                <ol>
+                    <li>التهرب من الضرائب والرسوم.</li>
+                    <li>التحايل على القيود القانونية.</li>
+                    <li>الخوف من العيب الاجتماعي.</li>
+                    <li>تجنب الإجراءات القانونية المعقدة.</li>
+                </ol>
+            </section>
+            
+            <!-- الفصل الأول: البيع -->
+            <section id="chapter1" class="section">
+                <h2>الفصل الأول: التصرفات المستترة في عقد البيع</h2>
+                
+                <h3>المبحث الأول: تعريف عقد البيع وأركانه وحكمه</h3>
+                <p><strong>البيع لغة:</strong> مقابلة شيء بشيء، وهو ضد الشراء، يقال: باع بيعاً، والبيع والشراء مقابلة مال بمال.</p>
+                
+                <p><strong>البيع اصطلاحاً:</strong> "مبادلة مال مباح بمثله على وجه مخصوص" أو "عقد على ملك عين بعوض".</p>
+                
+                <h4>أركان البيع في المذاهب الأربعة:</h4>
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">أركان عقد البيع في المذاهب الأربعة</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="40%">الأركان</th>
+                                <th width="40%">ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>1. الصيغة (الإيجاب والقبول)<br>2. العاقدان (البائع والمشتري)<br>3. المعقود عليه (المبيع والثمن)</td>
+                                <td>يضيفون شرطاً بأن يكون المعقود عليه معلوماً ومقدوراً على تسليمه</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>1. البائع والمشتري<br>2. الصيغة<br>3. المعقود عليه (المبيع والثمن)</td>
+                                <td>يشترطون أن يكون المبيع طاهراً منتفعاً به</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>1. العاقدان<br>2. المعقود عليه<br>3. الصيغة</td>
+                                <td>يشترطون العلم بالمعقود عليه وتوافر الأهلية في العاقدين</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>1. العاقدان<br>2. المعقود عليه<br>3. الصيغة</td>
+                                <td>يشترطون الرضا وعدم الإكراه في العقد</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>المبحث الثاني: صور التصرفات المستترة في البيع</h3>
+                
+                <h4>الصورة الأولى: بيع العينة</h4>
+                <p><strong>تعريفها:</strong> "أن يبيع شخص سلعة إلى آخر بثمن مؤجل، ثم يشتريها منه بثمن أقل نقداً".</p>
+                <p><strong>مثال:</strong> يبيع أحمد على محمد سيارة بمائة ألف جنيه مؤجلة، ثم يشتريها أحمد من محمد بتسعين ألفاً نقداً.</p>
+                <p><strong>الحكمة من تحريمها:</strong> التحايل على الربا، لأنها في حقيقتها قرض بفائدة.</p>
+                
+                <h4>الصورة الثانية: بيعتين في بيعة</h4>
+                <p><strong>تعريفها:</strong> "أن يقول البائع: أبيعك هذا بعشرة نقداً أو بعشرين نسيئة، دون تحديد أي البيعين وقع".</p>
+                <p><strong>مثال:</strong> يقول البائع: أبيعك هذا الثوب بعشرين جنيهاً نقداً أو بثلاثين مؤجلة، دون أن يحدد المشتري أي الصفقتين يريد.</p>
+                <p><strong>الحكمة من تحريمها:</strong> الغرر والجهالة، وعدم تحديد العقد.</p>
+                
+                <h3>المبحث الثالث: حكم كل صورة في المذاهب الأربعة</h3>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">مقارنة بين آراء المذاهب في بيع العينة</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="20%">الحكم</th>
+                                <th width="30%">الأدلة</th>
+                                <th width="30%">الشروط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>مكروه</td>
+                                <td>الأصل الإباحة، القياس على البيع العادي</td>
+                                <td>أن يكون البيعان منفصلين</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>محرم</td>
+                                <td>سد الذرائع، النهي عن التحايل على الربا</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>محرم</td>
+                                <td>قاعدة سد الذرائع، النهي عن الحيل</td>
+                                <td>إذا كان وسيلة للربا</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>محرم</td>
+                                <td>عموم النهي عن الربا، حديث النهي</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">مقارنة بين آراء المذاهب في بيع التورق</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="20%">الحكم</th>
+                                <th width="30%">الأدلة</th>
+                                <th width="30%">الشروط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>جائز</td>
+                                <td>الأصل الإباحة</td>
+                                <td>أن يكون البيعان منفصلين</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>مكروه</td>
+                                <td>سد الذرائع</td>
+                                <td>إن قصد به التحايل</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>جائز بشروط</td>
+                                <td>عدم وجود نص بالتحريم</td>
+                                <td>أن لا يكون وسيلة للربا</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>جائز بشروط</td>
+                                <td>القياس على البيع العادي</td>
+                                <td>أن لا يقصد به التحايل</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">مقارنة بين آراء المذاهب في بيع العربون</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="20%">الحكم</th>
+                                <th width="30%">الأدلة</th>
+                                <th width="30%">الشروط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>لا يجوز</td>
+                                <td>الغرر في العقود</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>يجوز</td>
+                                <td>العرف والعادة</td>
+                                <td>أن يكون معلوماً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>لا يجوز</td>
+                                <td>حديث "لا يحل سلف وبيع"</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>يجوز</td>
+                                <td>المصلحة والعرف</td>
+                                <td>أن يكون معلوماً</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>المبحث الرابع: موقف القانون المصري من التصرفات المستترة في البيع</h3>
+                
+                <h4>أولاً: النصوص القانونية الخاصة</h4>
+                <ol>
+                    <li><strong>القانون المدني المصري:</strong>
+                        <ul>
+                            <li>المادة 418: "إذا وجب للبائع عربون بمقتضى الاتفاق وكان المشتري قد دفعه، جاز للبائع أن يحتفظ به إذا ترك المشتري تنفيذ العقد، ما لم يكن هناك اتفاق على غير ذلك."</li>
+                            <li>المادة 421: "إذا كان الثمن مؤجلاً، جاز للبائع أن يشترط فسخ البيع إذا لم يستوف الثمن في الأجل."</li>
+                        </ul>
+                    </li>
+                    <li><strong>القانون التجاري المصري:</strong>
+                        <ul>
+                            <li>المادة 130: "تسري على البيوع التجارية أحكام القانون المدني فيما لم يرد بشأنه نص خاص في هذا القانون".</li>
+                            <li>المادة 145: "يعتبر باطلاً كل شرط يقصد به التحايل على أحكام هذا القانون".</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h3>المبحث الخامس: المقارنة بين الفقه الإسلامي والقانون المصري</h3>
+                
+                <h4>أولاً: أوجه الاتفاق</h4>
+                <ol>
+                    <li><strong>تحريم بيع العينة الربوي:</strong>
+                        <ul>
+                            <li>الفقه الإسلامي: محرم عند الجمهور.</li>
+                            <li>القانون المصري: باطل كمخالفة للنظام العام.</li>
+                        </ul>
+                    </li>
+                    <li><strong>بطلان بيعتين في بيعة:</strong>
+                        <ul>
+                            <li>الفقه الإسلامي: باطل عند الجمهور.</li>
+                            <li>القانون المصري: باطل لوجود الغرر والجهالة.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h4>ثانياً: أوجه الاختلاف</h4>
+                <ol>
+                    <li><strong>بيع العربون:</strong>
+                        <ul>
+                            <li>الفقه الإسلامي: مختلف فيه بين الجواز والمنع.</li>
+                            <li>القانون المصري: جائز بنص المادة 418 مدني.</li>
+                        </ul>
+                    </li>
+                    <li><strong>بيع التورق:</strong>
+                        <ul>
+                            <li>الفقه الإسلامي: مختلف فيه بشروط.</li>
+                            <li>القانون المصري: جائز ما لم يكن وسيلة للربا.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+            
+            <!-- الفصل الثاني: الربا -->
+            <section id="chapter2" class="section">
+                <h2>الفصل الثاني: التصرفات المستترة في عقد الربا</h2>
+                
+                <h3>المبحث الأول: تعريف الربا وأقسامه وحكمه</h3>
+                <p><strong>الربا لغة:</strong> الزيادة والنمو والارتفاع، يقال: رَبَا الشيءُ يَرْبُو رُبُواً: زاد ونما.</p>
+                
+                <p><strong>الربا اصطلاحاً:</strong> "زيادة مخصوصة في أشياء مخصوصة، أو تأخير في التقايض في أشياء مخصوصة".</p>
+                
+                <h4>أقسام الربا:</h4>
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">أقسام الربا في الفقه الإسلامي</caption>
+                        <thead>
+                            <tr>
+                                <th width="25%">النوع</th>
+                                <th width="35%">التعريف</th>
+                                <th width="40%">المثال</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ربا النسيئة (ربا الجاهلية)</strong></td>
+                                <td>هو الزيادة في الدين مقابل الأجل</td>
+                                <td>أن يُقرِض شخص ألف جنيه على أن يردها ألفاً ومائتين</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ربا الفضل</strong></td>
+                                <td>هو الزيادة في المثل مع الاتحاد في الجنس</td>
+                                <td>بيع كيلو قمح بكيلو ونصف قمح</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ربا القرض</strong></td>
+                                <td>هو اشتراط الزيادة في القرض</td>
+                                <td>إقراض مبلغ بشرط رد أكبر منه</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ربا البيع</strong></td>
+                                <td>هو الربا الحاصل في البيوع الربوية</td>
+                                <td>بيع الذهب بالذهب مع التفاضل</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>المبحث الثاني: صور التصرفات المستترة في الربا</h3>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">صور التصرفات المستترة في الربا</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">الصورة</th>
+                                <th width="30%">التعريف</th>
+                                <th width="50%">الأمثلة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>التحايل على ربا النسيئة</strong></td>
+                                <td>الوصول إلى ربا النسيئة بطريق غير مباشر</td>
+                                <td>1. بيع العينة<br>2. البيع المؤجل مع إعادة الشراء<br>3. القرض بفائدة مقنعة تحت مسمى هدية أو عمولة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>التحايل على ربا الفضل</strong></td>
+                                <td>التحايل على بيع المثليات بمثلها مع التفاضل</td>
+                                <td>1. بيع العملات مع التأخير<br>2. بيع الذهب بالفضة مع زيادة ثم إعادة البيع</td>
+                            </tr>
+                            <tr>
+                                <td><strong>القرض بفائدة مقنعة</strong></td>
+                                <td>إقراض المال بشرط منفعة غير الزيادة الصريحة</td>
+                                <td>1. القرض بشرط الخدمة<br>2. القرض بشرط الشراء من المقرض<br>3. القرض بشرط الإيداع في بنك المقرض</td>
+                            </tr>
+                            <tr>
+                                <td><strong>البيوع الآجلة مع الزيادة</strong></td>
+                                <td>بيع السلع الآجلة بزيادة مقابل الأجل</td>
+                                <td>1. بيع السلم المشروط<br>2. بيع المرابحة للأمر بالشراء</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحوالات الربوية</strong></td>
+                                <td>استخدام الحوالات للتحايل على الربا</td>
+                                <td>1. حوالة الديون بخصم<br>2. الحوالة مع التأخير</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>المبحث الثالث: حكم كل صورة في المذاهب الأربعة</h3>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">مقارنة بين آراء المذاهب في التحايل على ربا النسيئة</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="20%">الحكم</th>
+                                <th width="30%">الأدلة</th>
+                                <th width="30%">الشروط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>محرم</td>
+                                <td>قياساً على الربا</td>
+                                <td>إذا قصد به التحايل</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>محرم</td>
+                                <td>النصوص العامة</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>محرم</td>
+                                <td>قاعدة سد الذرائع</td>
+                                <td>إذا كان ذريعة للربا</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>محرم</td>
+                                <td>عموم النهي</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">مقارنة بين آراء المذاهب في التحايل على ربا الفضل</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="20%">الحكم</th>
+                                <th width="30%">الأدلة</th>
+                                <th width="30%">الشروط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>جائز</td>
+                                <td>الأصل الإباحة</td>
+                                <td>أن يكون العقدان منفصلين</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>محرم</td>
+                                <td>سد الذرائع</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>محرم</td>
+                                <td>حديث النبي صلى الله عليه وسلم</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>محرم</td>
+                                <td>النهي الوارد</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">مقارنة بين آراء المذاهب في القرض بفائدة مقنعة</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="20%">الحكم</th>
+                                <th width="30%">الأدلة</th>
+                                <th width="30%">الشروط</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>محرم</td>
+                                <td>القياس على الربا</td>
+                                <td>إذا كانت الفائدة معروفة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>محرم</td>
+                                <td>عموم النهي</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>محرم</td>
+                                <td>قاعدة الوسائل</td>
+                                <td>إذا كانت وسيلة للربا</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>محرم</td>
+                                <td>النصوص الصريحة</td>
+                                <td>جميع الصور</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- الفصل الثالث: الشركة -->
+            <section id="chapter3" class="section">
+                <h2>الفصل الثالث: التصرفات المستترة في عقد الشركة</h2>
+                
+                <h3>المبحث الأول: تعريف الشركة وأركانها وأقسامها</h3>
+                <p><strong>الشركة لغة:</strong> الاختلاط، يقال: شركت فلاناً في المال: إذا خالطته فيه.</p>
+                
+                <p><strong>الشركة اصطلاحاً:</strong> "عقد بين اثنين أو أكثر على التعاون في عمل مالي يقصد الربح".</p>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">أركان عقد الشركة في المذاهب الأربعة</caption>
+                        <thead>
+                            <tr>
+                                <th width="20%">المذهب</th>
+                                <th width="40%">الأركان</th>
+                                <th width="40%">ملاحظات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الحنفية</strong></td>
+                                <td>1. صيغة العقد (الإيجاب والقبول)<br>2. العاقدان</td>
+                                <td>يضيفون شرطاً بأن يكون رأس المال نقداً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المالكية</strong></td>
+                                <td>1. العاقدان<br>2. الصيغة<br>3. المحل<br>4. الربح<br>5. الأهلية</td>
+                                <td>يشترطون العلم بحصة كل شريك من الربح</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الشافعية</strong></td>
+                                <td>1. العاقدان<br>2. الصيغة<br>3. المحل</td>
+                                <td>يشترطون أن يكون العمل في الشركة مشروعاً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الحنابلة</strong></td>
+                                <td>1. العاقدان<br>2. الصيغة<br>3. المحل<br>4. الربح</td>
+                                <td>يشترطون العدل في توزيع الأرباح والخسائر</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- الفصل الرابع: الإيجار -->
+            <section id="chapter4" class="section">
+                <h2>الفصل الرابع: التصرفات المستترة في عقد الإيجار</h2>
+                
+                <h3>المبحث الأول: تعريف الإيجار وأركانه وأنواعه</h3>
+                <p><strong>الإيجار لغة:</strong> من الأجر، وهو العوض، يقال: أجرت الشيء: إذا أعطيته بأجر.</p>
+                
+                <p><strong>الإيجار اصطلاحاً:</strong> "تمليك منفعة مباحة بعوض معلوم".</p>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">أنواع الإيجار في الفقه الإسلامي</caption>
+                        <thead>
+                            <tr>
+                                <th width="30%">النوع</th>
+                                <th width="70%">التعريف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>إيجار المساكن</strong></td>
+                                <td>تمليك منفعة السكن بعوض معلوم</td>
+                            </tr>
+                            <tr>
+                                <td><strong>إيجار الأراضي الزراعية</strong></td>
+                                <td>تمليك منفعة الأرض للزراعة بعوض</td>
+                            </tr>
+                            <tr>
+                                <td><strong>إيجار المعدات والآلات</strong></td>
+                                <td>تمليك منفعة استخدام المعدات بعوض</td>
+                            </tr>
+                            <tr>
+                                <td><strong>إيجار المحلات التجارية</strong></td>
+                                <td>تمليك منفعة المحل للتجارة بعوض</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- الفصل الخامس: الوكالة -->
+            <section id="chapter5" class="section">
+                <h2>الفصل الخامس: التصرفات المستترة في عقد الوكالة</h2>
+                
+                <h3>المبحث الأول: تعريف الوكالة وأركانها وأقسامها</h3>
+                <p><strong>الوكالة لغة:</strong> تفويض الأمر إلى الغير، من الوكل: الاعتماد.</p>
+                
+                <p><strong>الوكالة اصطلاحاً:</strong> "تفويض شخص للتصرف عن الغير في شيء معلوم".</p>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">صور التحايل في عقد الوكالة</caption>
+                        <thead>
+                            <tr>
+                                <th width="25%">الصورة</th>
+                                <th width="35%">التعريف</th>
+                                <th width="40%">الأمثلة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>الوكالة بالعمولة المقنعة</strong></td>
+                                <td>إخفاء حقيقة العمولة أو زيادتها</td>
+                                <td>1. عمولة مخفية في الصفقة<br>2. عمولة مبالغ فيها</td>
+                            </tr>
+                            <tr>
+                                <td><strong>تجاوز حدود الوكالة</strong></td>
+                                <td>التصرف خارج نطاق الوكالة</td>
+                                <td>1. البيع بثمن أقل من المحدد<br>2. الشراء بثمن أعلى من المحدد</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الوكالة مع وجود مصلحة شخصية</strong></td>
+                                <td>وجود تعارض بين مصلحة الوكيل والموكل</td>
+                                <td>1. بيع الوكيل لنفسه<br>2. شراء الوكيل من نفسه</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الوكالة الوهمية</strong></td>
+                                <td>وكالة لا حقيقة لها</td>
+                                <td>1. توكيل صوري للتهرب من الضرائب<br>2. وكالة لمقصد غير مشروع</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- الفصل السادس: الهبة -->
+            <section id="chapter6" class="section">
+                <h2>الفصل السادس: التصرفات المستترة في عقد الهبة</h2>
+                
+                <h3>المبحث الأول: تعريف الهبة وأركانها وأحكامها</h3>
+                <p><strong>الهبة لغة:</strong> العطية، يقال: وهب يهب هبة وهيبة.</p>
+                
+                <p><strong>الهبة اصطلاحاً:</strong> "تمليك عين بلا عوض في الحال".</p>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">أحكام الهبة في المذاهب الأربعة</caption>
+                        <thead>
+                            <tr>
+                                <th width="25%">المسألة</th>
+                                <th width="25%">الحنفية</th>
+                                <th width="25%">المالكية</th>
+                                <th width="25%">الشافعية</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>اشتراط القبض</strong></td>
+                                <td>لا يشترط</td>
+                                <td>يشترط</td>
+                                <td>يشترط</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الرجوع في الهبة</strong></td>
+                                <td>يجوز بلا عذر</td>
+                                <td>لا يجوز إلا من الوالد لولده</td>
+                                <td>لا يجوز إلا بعذر</td>
+                            </tr>
+                            <tr>
+                                <td><strong>هبة المريض</strong></td>
+                                <td>تجرى مجرى الوصية</td>
+                                <td>تعتبر وصية</td>
+                                <td>تعتبر وصية في الثلث</td>
+                            </tr>
+                            <tr>
+                                <td><strong>هبة العين المرهونة</strong></td>
+                                <td>تصح مع بقاء الرهن</td>
+                                <td>تصح مع بقاء الرهن</td>
+                                <td>تصح مع بقاء الرهن</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- الفصل السابع: الوصية -->
+            <section id="chapter7" class="section">
+                <h2>الفصل السابع: التصرفات المستترة في الوصية</h2>
+                
+                <h3>المبحث الأول: تعريف الوصية وأركانها وأحكامها</h3>
+                <p><strong>الوصية لغة:</strong> العهد، يقال: أوصى يوصي وصية.</p>
+                
+                <p><strong>الوصية اصطلاحاً:</strong> "تمليك مضاف إلى ما بعد الموت".</p>
+                
+                <div class="table-container">
+                    <table>
+                        <caption class="table-caption">شروط الوصية في الفقه والقانون</caption>
+                        <thead>
+                            <tr>
+                                <th width="30%">الشرط</th>
+                                <th width="35%">في الفقه الإسلامي</th>
+                                <th width="35%">في القانون المصري</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>أهلية الموصي</strong></td>
+                                <td>البلوغ، العقل، الرشد، عدم الحجر</td>
+                                <td>الأهلية الكاملة (18 سنة)، عدم الحجر</td>
+                            </tr>
+                            <tr>
+                                <td><strong>أهلية الموصى له</strong></td>
+                                <td>أن يكون أهلاً للتمليك (حي، موجود، معين)</td>
+                                <td>أن يكون شخصاً طبيعياً أو اعتبارياً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المال الموصى به</strong></td>
+                                <td>أن يكون مالاً مباحاً، معلوماً، مقدوراً على تسليمه</td>
+                                <td>أن يكون مالاً قابلاً للتعامل، معلوماً</td>
+                            </tr>
+                            <tr>
+                                <td><strong>حدود الوصية</strong></td>
+                                <td>الثلث إلا بإجازة الورثة</td>
+                                <td>الثلث إلا بإجازة الورثة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الوصية للوارث</strong></td>
+                                <td>محرمة عند الجمهور</td>
+                                <td>تختلف حسب المذاهب الشخصية</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- الخاتمة والتوصيات -->
+            <section id="conclusion" class="section">
+                <h2>الخاتمة والتوصيات</h2>
+                
+                <h3>أولاً: النتائج العامة</h3>
+                <p>بعد هذه الدراسة التفصيلية للتصرفات المستترة في سبعة عقود رئيسية، يمكن استخلاص النتائج التالية:</p>
+                
+                <h4>1. نتائج في الجانب الفقهي:</h4>
+                <ul>
+                    <li>اتفاق المذاهب الأربعة على تحريم التصرفات المستترة إذا قصد بها التحايل على محرم قطعي.</li>
+                    <li>اختلافهم في التفاصيل والتطبيقات العملية لكل صورة من الصور.</li>
+                    <li>تأكيد أهمية النية والقصد في الحكم على التصرفات.</li>
+                    <li>تفاوت درجة التحريم بين المذاهب حسب قوة الدليل وطبيعة التحايل.</li>
+                </ul>
+                
+                <h4>2. نتائج في الجانب القانوني:</h4>
+                <ul>
+                    <li>تقارب كبير بين أحكام القانون المصري والأحكام الفقهية الراجحة.</li>
+                    <li>صرامة القضاء المصري في مواجهة التصرفات المستترة المخالفة للنظام العام.</li>
+                    <li>تطور التشريع المصري في مجال مكافحة التصرفات المستترة.</li>
+                    <li>فعالية الآليات القانونية في الكشف عن هذه التصرفات ومعاقبة مرتكبيها.</li>
+                </ul>
+                
+                <h4>3. نتائج في الجانب المقارن:</h4>
+                <ul>
+                    <li>أوجه الاتفاق تفوق أوجه الاختلاف بين الفقه الإسلامي والقانون المصري.</li>
+                    <li>تكامل الأدوار بين الأحكام الشرعية والقانونية في مكافحة الظاهرة.</li>
+                    <li>إمكانية التطوير المتبادل بين النظامين.</li>
+                </ul>
+                
+                <h3>ثانياً: التوصيات</h3>
+                <p>بناء على النتائج السابقة، يقدم الباحث التوصيات التالية:</p>
+                
+                <h4>1. التوصيات التشريعية:</h4>
+                <ul>
+                    <li><strong>على المستوى الوطني (مصر):</strong>
+                        <ul>
+                            <li>تعديل التشريعات لتتوافق مع الأحكام الفقهية الراجحة.</li>
+                            <li>إصدار قانون موحد للتصرفات المستترة.</li>
+                            <li>تفعيل المواد القانونية الموجودة.</li>
+                            <li>تشديد العقوبات على التصرفات المستترة الخطيرة.</li>
+                        </ul>
+                    </li>
+                    <li><strong>على المستوى العربي والإسلامي:</strong>
+                        <ul>
+                            <li>توحيد التشريعات في الدول العربية والإسلامية.</li>
+                            <li>إنشاء هيئة رقابية عربية لمكافحة التصرفات المستترة.</li>
+                            <li>تبادل الخبرات بين الدول في هذا المجال.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>2. التوصيات القضائية:</h4>
+                <ul>
+                    <li>إنشاء دوائر متخصصة في المحاكم للنظر في قضايا التصرفات المستترة.</li>
+                    <li>تدريب القضاة على الأحكام الفقهية والقانونية في هذا المجال.</li>
+                    <li>تسهيل إجراءات الإثبات في قضايا التصرفات المستترة.</li>
+                    <li>تفعيل دور الخبرة في كشف التصرفات المستترة.</li>
+                </ul>
+                
+                <h4>3. التوصيات الرقابية:</h4>
+                <ul>
+                    <li><strong>في الجهات الرقابية المالية:</strong>
+                        <ul>
+                            <li>تطوير آليات الرقابة على المؤسسات المالية.</li>
+                            <li>تفعيل الرقابة المستمرة بدلاً من الرقابة الدورية.</li>
+                            <li>استخدام التقنيات الحديثة في الرقابة.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>4. التوصيات التوعوية:</h4>
+                <ul>
+                    <li><strong>للمواطنين:</strong>
+                        <ul>
+                            <li>نشر الوعي الشرعي بمخاطر التصرفات المستترة.</li>
+                            <li>توعية الناس بأحكام المعاملات في الإسلام.</li>
+                            <li>تحذير الناس من عواقب التصرفات المستترة.</li>
+                        </ul>
+                    </li>
+                    <li><strong>للمؤسسات التعليمية:</strong>
+                        <ul>
+                            <li>إدراج مادة عن التصرفات المستترة في المناهج التعليمية.</li>
+                            <li>عقد ندوات وورش عمل في الجامعات.</li>
+                            <li>تشجيع البحث العلمي في هذا المجال.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="quote">
+                    <p>في الختام، فإن التصرفات المستترة تشكل تحدياً كبيراً للنظم القانونية والشرعية في العالم المعاصر. وقد بين هذا البحث أن الفقه الإسلامي بمنهجه المتكامل، والقانون المصري بتشريعاته المتطورة، يمتلكان الأدوات الكافية لمكافحة هذه الظاهرة.</p>
+                    <p>إن نجاح المواجهة يتطلب تعاوناً وتنسيقاً بين جميع الجهات: التشريعية، والقضائية، والرقابية، والتعليمية، والإعلامية. كما يتطلب وعياً جماعياً بمخاطر هذه التصرفات وآثارها السلبية على الفرد والمجتمع.</p>
+                    <p>والأمل معقود على أن تساهم هذه الدراسة في تقديم رؤية متكاملة للتعامل مع التصرفات المستترة، تحقق التوازن بين مصلحة الفرد ومصلحة المجتمع، وبين حرية التعاقد وضوابط الشرع والقانون.</p>
+                </div>
+                
+                <p>ونسأل الله تعالى أن يجعل هذا العمل خالصاً لوجهه الكريم، ونفعاً لعباده، وأن يوفق الجميع لما فيه صلاح البلاد والعباد.</p>
+                <p>وصلى الله على سيدنا محمد وعلى آله وصحبه وسلم.</p>
+            </section>
+            
+            <!-- المراجع -->
+            <section id="references" class="section">
+                <h2>المراجع والفهارس</h2>
+                
+                <h3>أولاً: المراجع العربية</h3>
+                
+                <h4>المراجع الفقهية الأساسية:</h4>
+                <ol>
+                    <li>القرآن الكريم: مصحف المدينة النبوية.</li>
+                    <li>كتب الحديث:
+                        <ul>
+                            <li>البخاري، محمد بن إسماعيل، صحيح البخاري، دار طوق النجاة، 1422 هـ.</li>
+                            <li>مسلم، مسلم بن الحجاج، صحيح مسلم، دار إحياء التراث العربي، بيروت.</li>
+                        </ul>
+                    </li>
+                    <li>كتب الفقه الحنفي:
+                        <ul>
+                            <li>المرغيناني، علي بن أبي بكر، الهداية في شرح بداية المبتدي، دار إحياء التراث العربي، بيروت، 1990م.</li>
+                            <li>الكاساني، علاء الدين، بدائع الصنائع في ترتيب الشرائع، دار الكتب العلمية، بيروت، ط2، 1406هـ.</li>
+                        </ul>
+                    </li>
+                    <li>كتب الفقه المالكي:
+                        <ul>
+                            <li>الدردير، أحمد بن محمد، الشرح الكبير، دار الفكر، بيروت.</li>
+                            <li>القرافي، أحمد بن إدريس، الفروق، دار السلام، القاهرة، ط1، 1421هـ.</li>
+                        </ul>
+                    </li>
+                    <li>كتب الفقه الشافعي:
+                        <ul>
+                            <li>النووي، يحيى بن شرف، روضة الطالبين، المكتب الإسلامي، دمشق، ط3، 1412هـ.</li>
+                        </ul>
+                    </li>
+                    <li>كتب الفقه الحنبلي:
+                        <ul>
+                            <li>ابن قدامة، عبدالله بن أحمد، المغني، دار عالم الكتب، الرياض، ط3، 1417هـ.</li>
+                            <li>ابن تيمية، أحمد بن عبدالحليم، مجموع الفتاوى، مجمع الملك فهد، المدينة، ط1، 1416هـ.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h4>المراجع القانونية المصرية:</h4>
+                <ol>
+                    <li>القوانين والتشريعات:
+                        <ul>
+                            <li>القانون المدني المصري رقم 131 لسنة 1948 وتعديلاته.</li>
+                            <li>القانون التجاري المصري رقم 17 لسنة 1999 وتعديلاته.</li>
+                            <li>قانون الشركات رقم 159 لسنة 1981 وتعديلاته.</li>
+                        </ul>
+                    </li>
+                    <li>كتب الفقه القانوني:
+                        <ul>
+                            <li>السنهوري، عبدالرزاق، الوسيط في شرح القانون المدني، دار النهضة العربية، القاهرة، 1964م.</li>
+                            <li>والي، فتحي، نظرية العقد، دار النهضة العربية، القاهرة، 1998م.</li>
+                            <li>زكي، محمود جمال الدين، العقود المسماة، دار النهضة العربية، القاهرة، 2010م.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h3>ثانياً: المراجع الأجنبية</h3>
+                <ol>
+                    <li>Schacht, J., An Introduction to Islamic Law, Oxford University Press, 1964.</li>
+                    <li>Coulson, N.J., A History of Islamic Law, Edinburgh University Press, 1964.</li>
+                    <li>Vogel, F.E., & Hayes, S.L., Islamic Law and Finance: Religion, Risk, and Return, Kluwer Law International, 1998.</li>
+                </ol>
+                
+                <div class="nav-top">
+                    <a href="#title-page">العودة إلى أعلى الصفحة</a>
+                </div>
+            </section>
+            
+            <footer>
+                <p>تم إعداد هذا البحث في: القاهرة - جمهورية مصر العربية</p>
+                <p>تاريخ الإنهاء: 1445هـ / 2024م</p>
+                <p>الباحث: محمد مصطفى</p>
+                <p>جميع الحقوق محفوظة © 2024</p>
+            </footer>
+        </main>
+    </div>
+    
+    <script>
+        // إضافة تفاعلية للروابط
+        document.addEventListener('DOMContentLoaded', function() {
+            // تفعيل التنقل في الشريط الجانبي
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const sections = document.querySelectorAll('.section');
+            
+            // تحديث الرابط النشط أثناء التمرير
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // تنعيم التمرير إلى الأقسام
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                        
+                        // تحديث الرابط النشط
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+            
+            // جعل الجداول أكثر تفاعلية
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                // إضافة تأثير hover للصفوف
+                const rows = table.querySelectorAll('tbody tr');
+                rows.forEach(row => {
+                    row.addEventListener('mouseenter', function() {
+                        this.style.backgroundColor = '#e3f2fd';
+                        this.style.transition = 'background-color 0.3s';
+                    });
+                    
+                    row.addEventListener('mouseleave', function() {
+                        const index = Array.from(rows).indexOf(this);
+                        this.style.backgroundColor = index % 2 === 0 ? '#f8f9fa' : '#ffffff';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
